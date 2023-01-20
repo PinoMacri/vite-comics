@@ -72,11 +72,11 @@ export default {
         <div class="divImgHeader">
             <img src="../assets/img/dc-logo.png" alt="">
         </div>
-        <nav>
+        <nav id="headerNav">
 
             <ul>
                 <li v-for="link in links" v-bind:key="link.text" v-on:click="currentIndex = link.text">
-                    <a v-bind:href="link.url">
+                    <a class="principalLink" v-bind:href="link.url">
                         <b>{{ link.text }}</b>
                     </a>
                     <div v-if="currentIndex === link.text" class="selectedNav"></div>
@@ -94,6 +94,8 @@ export default {
 <style lang="scss" scope>
 @use "../assets/sass/mixin" as *;
 @use "../assets/sass/variables" as *;
+
+
 
 ul {
     @include style-list;
@@ -118,7 +120,7 @@ ul {
         }
     }
 
-    a {
+    .principalLink {
         @include style-list;
         color: $text-color-black;
         text-transform: uppercase;

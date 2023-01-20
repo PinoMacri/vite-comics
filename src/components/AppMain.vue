@@ -30,7 +30,7 @@ export default {
         <div id="contentGoes">
             <div class="container">
                 <p>
-                    <b>-- Content goes here --</b>
+                    <b> -- Content goes here --</b>
                 </p>
             </div>
         </div>
