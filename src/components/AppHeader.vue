@@ -4,6 +4,7 @@ export default {
     name: "AppHeader",
     data() {
         return {
+            currentIndex: "Comics",
             links: [
                 {
                     text: 'Characters',
@@ -14,6 +15,7 @@ export default {
                     text: 'Comics',
                     url: '#',
                     current: true,
+
                 },
                 {
                     text: 'Movies',
@@ -69,15 +71,19 @@ export default {
         <div>
             <img src="../assets/img/dc-logo.png" alt="">
         </div>
-        <div>
+        <nav>
+
             <ul>
-                <li v-for="link in links" v-bind:key="link.text">
+                <li v-for="link in links" v-bind:key="link.text" v-on:click="currentIndex = link.text">
                     <a v-bind:href="link.url">
                         <b>{{ link.text }}</b>
                     </a>
+                    <div v-if="currentIndex === link.text" class="selectedNav"></div>
                 </li>
             </ul>
-        </div>
+
+        </nav>
+
     </header>
 </template>
 
@@ -91,7 +97,25 @@ export default {
 ul {
     @include style-list;
     @include between-flex;
+    height: 100%;
 
+    li {
+        @include center-flex;
+        flex-direction: column;
+        width: calc(100% / 10);
+        margin-left: 10px;
+        position: relative;
+        height: 100%;
+
+        &:hover {
+            cursor: pointer;
+
+            a {
+                color: $text-color-blue;
+            }
+
+        }
+    }
 
     a {
         @include style-list;
@@ -99,15 +123,30 @@ ul {
         text-transform: uppercase;
         margin: 0px 20px;
 
-        &:hover {
-            color: $text-color-blue;
-        }
+
+
     }
+}
+
+.selectedNav {
+    width: 100%;
+    height: 7px;
+    background-color: $text-color-blue;
+    position: absolute;
+    bottom: 0;
+
 }
 
 header {
     @include between-flex;
     font-family: "Open Sans Condensed", sans-serif;
+    position: relative;
+    height: 110px;
+}
+
+nav {
+    height: 100%;
+    @include center-flex
 }
 
 .container {

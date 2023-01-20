@@ -31,18 +31,22 @@ export default {
   box-sizing: border-box;
 }
 
-;
+
 
 body {
   font-family: "Open Sans", sans-serif;
 }
 
-;
+img {
+  width: 100%;
+  height: auto;
+}
 
 header,
 main,
 footer,
-div {
+div,
+nav {
   border: 1px solid black;
 }
 </style>
