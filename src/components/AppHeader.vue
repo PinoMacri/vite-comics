@@ -68,7 +68,8 @@ export default {
 
 <template>
     <header class="container">
-        <div>
+
+        <div class="divImgHeader">
             <img src="../assets/img/dc-logo.png" alt="">
         </div>
         <nav>
@@ -141,7 +142,13 @@ header {
     @include between-flex;
     font-family: "Open Sans Condensed", sans-serif;
     position: relative;
-    height: 110px;
+    height: 130px;
+
+    .divImgHeader {
+        display: flex;
+        align-items: center;
+
+    }
 }
 
 nav {

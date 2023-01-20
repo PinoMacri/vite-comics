@@ -34,17 +34,4 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
-
-img {
-  width: 100%;
-  height: auto;
-}
-
-header,
-main,
-footer,
-div,
-nav {
-  border: 1px solid black;
-}
 </style>
