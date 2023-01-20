@@ -42,6 +42,9 @@ export default {
 }
 </script>
 
+
+
+
 <template>
     <footer>
         <div id="backgroundFooter">
@@ -84,11 +87,14 @@ export default {
 
                     <h3>FOLLOW US</h3>
                     <ul>
-                        <li><a href="#"><img src="../assets/img/footer-facebook.png" alt=""></a></li>
-                        <li><a href="#"><img src="../assets/img/footer-twitter.png" alt=""></a></li>
-                        <li><a href="#"><img src="../assets/img/footer-youtube.png" alt=""></a></li>
-                        <li><a href="#"><img src="../assets/img/footer-pinterest.png" alt=""></a></li>
-                        <li><a href="#"><img src="../assets/img/footer-periscope.png" alt=""></a></li>
+                        <li><a class="loghiSocial" href="#"><img src="../assets/img/footer-facebook.png" alt=""></a>
+                        </li>
+                        <li><a class="loghiSocial" href="#"><img src="../assets/img/footer-twitter.png" alt=""></a></li>
+                        <li><a class="loghiSocial" href="#"><img src="../assets/img/footer-youtube.png" alt=""></a></li>
+                        <li><a class="loghiSocial" href="#"><img src="../assets/img/footer-pinterest.png" alt=""></a>
+                        </li>
+                        <li><a class="loghiSocial" href="#"><img src="../assets/img/footer-periscope.png" alt=""></a>
+                        </li>
                     </ul>
 
                 </nav>
@@ -96,6 +102,9 @@ export default {
         </div>
     </footer>
 </template>
+
+
+
 
 <style lang="scss" scope>
 @use "../assets/sass/mixin" as *;
@@ -174,7 +183,12 @@ footer {
                     @include style-list;
                     color: $text-color-black;
                     color: rgb(155, 155, 155);
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
+
             }
 
 
@@ -210,12 +224,23 @@ footer {
                 background-color: transparent;
                 border: 2px solid $text-color-blue;
                 cursor: pointer;
+
+                &:hover {
+                    background-color: $text-color-blue ;
+                }
             }
         }
 
         nav h3 {
             margin-right: 10px;
             color: $text-color-blue ;
+        }
+    }
+
+    .loghiSocial {
+        &:hover {
+            transform: scale(1.3);
+            color: white;
         }
     }
 }
