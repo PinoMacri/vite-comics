@@ -19,6 +19,8 @@ div.jumbotron {
     padding: 20px;
     height: 400px;
     background-image: url("../assets/img/jumbotron.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
 
     button {
