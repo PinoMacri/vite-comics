@@ -1,11 +1,13 @@
 <script>
 import "@fontsource/open-sans"
 import AppCard from "./AppCard.vue"
+import AppButton from "./AppButton.vue"
 
 export default {
     name: "AppMain",
     components: {
         AppCard: AppCard,
+        AppButton: AppButton,
     },
     data() {
         return {
@@ -120,6 +122,7 @@ export default {
         <div id="contentGoes">
             <div class="container">
                 <app-card :cards="cards"></app-card>
+                <app-button></app-button>
             </div>
         </div>
 
@@ -160,7 +163,7 @@ main {
 #contentGoes {
     display: flex;
     align-items: center;
-    min-height: 500px;
+    min-height: 700px;
     font-family: "Open Sans ", sans-serif;
     color: white;
     background-color: $text-color-black;

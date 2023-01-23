@@ -1,4 +1,5 @@
 <script>
+import "@fontsource/open-sans-condensed"
 export default {
     name: "AppCard",
     props: {
@@ -19,17 +20,27 @@ export default {
 <style lang="scss" scoped>
 @use "../assets/sass/mixin" as*;
 
+body {
+    font-family: "open";
+}
+
 .singleCard {
     width: calc(100% / 6);
-    height: 200px;
+    height: 280px;
     overflow: hidden;
-    padding: 30px;
+    padding: 40px 10px;
 
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: 0px -10px;
+    }
+
+    p {
+        font-size: 12px;
+        text-transform: uppercase;
+        padding-top: 10px;
     }
 }
 </style>
