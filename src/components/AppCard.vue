@@ -20,9 +20,6 @@ export default {
 <style lang="scss" scoped>
 @use "../assets/sass/mixin" as*;
 
-body {
-    font-family: "open";
-}
 
 .singleCard {
     width: calc(100% / 6);

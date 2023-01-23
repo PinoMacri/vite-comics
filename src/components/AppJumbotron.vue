@@ -1,13 +1,23 @@
 <script>
+import AppButton from "./AppButton.vue"
 export default {
     name: "AppJumbotron",
+    components: {
+        AppButton: AppButton,
+    },
+    data() {
+        return {
+            textbutton: "CURRENT SERIES"
+        }
+
+    }
 }
 </script>
 
 <template>
     <div class="jumbotron">
         <div class="container">
-            <button>CURRENT SERIES</button>
+            <app-button type="type-1" :textbutton="textbutton"></app-button>
         </div>
     </div>
 </template>
@@ -21,7 +31,12 @@ div.jumbotron {
     background-image: url("../assets/img/jumbotron.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+
+    div.container {
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
 
     button {
         position: absolute;

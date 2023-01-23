@@ -2,12 +2,18 @@
 import "@fontsource/open-sans"
 export default {
     name: "AppButton",
+    props: {
+        type: String,
+        textbutton: String,
+    }
 }
 </script>
 
 <template>
     <div class="buttons">
-        <button>LOAD MORE</button>
+        <button class="basic-style" :class="type">
+            {{ textbutton }}
+        </button>
     </div>
 
 </template>
@@ -20,7 +26,7 @@ div.buttons {
     justify-content: center;
     width: 100%;
 
-    button {
+    .basic-style {
         background-color: $text-color-blue ;
         padding: 10px 30px;
         border: none;
@@ -29,9 +35,24 @@ div.buttons {
         margin-top: 30px;
 
         &:hover {
-            transform: scale(1.2);
             cursor: pointer;
+        }
+    }
 
+    button.type-1 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        &:hover {
+            color: gold;
+        }
+    }
+
+    button.type-2 {
+
+        &:hover {
+            transform: scale(1.2);
         }
     }
 }

@@ -127,7 +127,7 @@ export default {
             <div class="container">
 
                 <app-card :cards="cards"></app-card>
-                <app-button></app-button>
+                <app-button type="type-2" textbutton="LOAD MORE"></app-button>
             </div>
         </div>
 
