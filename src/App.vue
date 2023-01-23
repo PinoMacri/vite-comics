@@ -8,6 +8,7 @@ export default {
     AppHeader: AppHeader,
     AppMain: AppMain,
     AppFooter: AppFooter,
+
   }
 }
 </script>
