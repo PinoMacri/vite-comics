@@ -2,12 +2,14 @@
 import "@fontsource/open-sans"
 import AppCard from "./AppCard.vue"
 import AppButton from "./AppButton.vue"
+import AppJumbotron from "./AppJumbotron.vue"
 
 export default {
     name: "AppMain",
     components: {
         AppCard: AppCard,
         AppButton: AppButton,
+        AppJumbotron: AppJumbotron,
     },
     data() {
         return {
@@ -120,7 +122,10 @@ export default {
 <template>
     <main>
         <div id="contentGoes">
+            <div class="container"></div>
+            <app-jumbotron></app-jumbotron>
             <div class="container">
+
                 <app-card :cards="cards"></app-card>
                 <app-button></app-button>
             </div>
@@ -161,11 +166,10 @@ main {
 }
 
 #contentGoes {
-    display: flex;
-    align-items: center;
-    min-height: 700px;
+    min-height: 800px;
     font-family: "Open Sans ", sans-serif;
     color: white;
+    padding-bottom: 50px;
     background-color: $text-color-black;
     font-size: $font-size;
 

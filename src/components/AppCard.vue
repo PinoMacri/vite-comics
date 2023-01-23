@@ -26,7 +26,7 @@ body {
 
 .singleCard {
     width: calc(100% / 6);
-    height: 280px;
+    height: 350px;
     overflow: hidden;
     padding: 40px 10px;
 
@@ -34,7 +34,7 @@ body {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: 0px -10px;
+        object-position: 0px 0px;
     }
 
     p {
