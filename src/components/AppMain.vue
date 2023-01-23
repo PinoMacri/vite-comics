@@ -14,6 +14,7 @@ export default {
     data() {
         return {
             currentIndex: "Comics",
+            textbutton: "LOAD MORE",
             images: [
                 { text: "digital comics ", img: "buy-comics-digital-comics.png" },
                 { text: "dc merchandise ", img: "buy-comics-merchandise.png" },
@@ -127,7 +128,7 @@ export default {
             <div class="container">
 
                 <app-card :cards="cards"></app-card>
-                <app-button type="type-2" textbutton="LOAD MORE"></app-button>
+                <app-button type="type-2" :textbutton="textbutton"></app-button>
             </div>
         </div>
 
